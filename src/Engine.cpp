@@ -31,6 +31,11 @@ Engine::Engine () {
 }
 
 Engine::~Engine() {
+    for(Pendulum pendulum : this->pendulums) {
+        pendulum.~Pendulum();
+    }
+
+    this->liberarVector();
     delete this->window;
 }
 
@@ -61,6 +66,10 @@ void Engine::pollEvents()
 
 void Engine::addPendulum(const Pendulum& pendulum) {
     this->pendulums.push_back(pendulum);
+}
+
+void Engine::liberarVector() {
+    this->pendulums.clear();
 }
 
 //Update Functions

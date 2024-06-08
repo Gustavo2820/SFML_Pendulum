@@ -2,6 +2,7 @@
 
 #include<iostream>
 #include<cmath>
+#include<ctime>
 
 #include<SFML/Graphics.hpp>
 #include<SFML/Audio.hpp>

@@ -34,6 +34,7 @@ class Engine {
         //Functions
         void pollEvents();
         void addPendulum(const Pendulum& pendulum);
+        void liberarVector();
 
         //Update Functions
         void update();
